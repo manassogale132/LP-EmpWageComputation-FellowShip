@@ -1,72 +1,41 @@
+package practice;
 
-public class Main {
+import java.util.Random;
+
+public class Main1 {
 
 	public static void main(String[] args) {
 		
 		Computation obj1=new Computation();
 		obj1.empbuilder();
-
+		
 	}
 
 }
 
+package practice;
+
 import java.util.Random;
-import java.util.Scanner;
 
 public class Computation {
 
 	
 	public void empbuilder() {
-		Scanner scan=new Scanner(System.in);
-		System.out.println("---------------------------------------");
-		System.out.println("--Employee Wage Builder--");
-		System.out.println("---------------------------------------");
-		System.out.println("1.Enter Company-Name :");
-		String cname=scan.nextLine();
-		System.out.println("2.Enter Full-Wage :");
-		int fwage=scan.nextInt();
-		System.out.println("3.Enter Half-Wage :");
-		int hwage=scan.nextInt();
-		System.out.println("4.Enter No-Wage :");
-		int nwage=scan.nextInt();
-		System.out.println("5.Enter Working-Days :");
-		int wdays=scan.nextInt();
-		System.out.println("---------------------------------------");
-		System.out.println(" ");
-		System.out.println(" ");
-		
-		System.out.println("Days"+"                  "+"Wage"+"                    "+"Total Sum");
-		System.out.println(" ");
-		int sum=0;
-		for(int i=1;i<=wdays;i++) {
-		Random rand=new Random();
-		int attend=rand.nextInt(3);
-		
-		switch(attend) {
-		
-		case 0:
-		sum=sum+nwage;
-		System.out.println("Day "+i+"                  "+nwage+"                         "+sum);
-		break;
 	
-		case 1:
-			sum=sum+hwage;
-			System.out.println("Day "+i+"                  "+hwage+"                         "+sum);
-			break;
-			
-		case 2:
-			sum=sum+fwage;  
-			System.out.println("Day "+i+"                  "+fwage+"                         "+sum);
-			break;
+		System.out.println("--Employee Wage Builder--");
+		System.out.println(" ");
 		
+		Random rand=new Random();
+		int attendance=rand.nextInt(2);
+		
+		
+		if(attendance == 0) {
+			System.out.println("Employee is Absent");
+		}else {
+			System.out.println("Employee is Present");
 		}
-		}
-		System.out.println(" ");
-		System.out.println(" ");
-		System.out.println("---------------------------------------");
-		System.out.println("Total Employee wage for"+" "+cname+" "+"is :"+sum);
-		System.out.println("---------------------------------------");
 		
 	}
-
+	
+	
 }
