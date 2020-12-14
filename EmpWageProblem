@@ -33,22 +33,29 @@ public class Computation {
 		Random rand=new Random();
 		int attendance=rand.nextInt(3);
 		
+		switch(attendance) {
 		
-		if(attendance == 0) {
+		case 0:
 			System.out.println("Employee is Absent");
 			System.out.println(noWage);
 			System.out.println(" ");
-		}else if(attendance == 1) {
+			break;
+			
+		case 1:
 			System.out.println("Employee is Parttime");
 			System.out.println(halfWage);
 			System.out.println(" ");
-		}else {
+			break;
+			
+		case 2:
 			System.out.println("Employee is Present");
 			System.out.println(fullWage);
 			System.out.println(" ");
+			break;
 		}
 		
 	}
 	
 	
 }
+
