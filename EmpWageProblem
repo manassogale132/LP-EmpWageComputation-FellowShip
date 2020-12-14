@@ -58,6 +58,10 @@ public class Computation {
 		}
 		
 	}
+		    System.out.println("  ");
+		    System.out.println("------------------------------------------------------------");
+		    System.out.println("Total emp Wage :"+sum);
+		    System.out.println("------------------------------------------------------------");
 	}
 	
 	
