@@ -31,12 +31,16 @@ public class Computation {
 		System.out.println(" ");
 		
 		Random rand=new Random();
-		int attendance=rand.nextInt(2);
+		int attendance=rand.nextInt(3);
 		
 		
 		if(attendance == 0) {
 			System.out.println("Employee is Absent");
 			System.out.println(noWage);
+			System.out.println(" ");
+		}else if(attendance == 1) {
+			System.out.println("Employee is Parttime");
+			System.out.println(halfWage);
 			System.out.println(" ");
 		}else {
 			System.out.println("Employee is Present");
