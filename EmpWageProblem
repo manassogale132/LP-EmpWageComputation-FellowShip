@@ -19,6 +19,11 @@ import java.util.Random;
 
 public class Computation {
 
+	int wagePerHour=20;
+	int fullDayHours=8;
+	int fullWage=wagePerHour*fullDayHours;
+	int halfWage=fullWage/2;
+	int noWage=0;
 	
 	public void empbuilder() {
 	
@@ -31,8 +36,12 @@ public class Computation {
 		
 		if(attendance == 0) {
 			System.out.println("Employee is Absent");
+			System.out.println(noWage);
+			System.out.println(" ");
 		}else {
 			System.out.println("Employee is Present");
+			System.out.println(fullWage);
+			System.out.println(" ");
 		}
 		
 	}
