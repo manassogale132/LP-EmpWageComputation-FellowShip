@@ -24,38 +24,41 @@ public class Computation {
 	int fullWage=wagePerHour*fullDayHours;
 	int halfWage=fullWage/2;
 	int noWage=0;
+	int sum=0;
+	int workingDays=20;
 	
 	public void empbuilder() {
 	
 		System.out.println("--Employee Wage Builder--");
+		System.out.println("---------------------------------------------------------------");
 		System.out.println(" ");
 		
+		    System.out.println("Days"+"          "+"Wage"+"              "+"Total");
+		    System.out.println(" ");
+		    for(int i=1;i<=workingDays;i++) {
 		Random rand=new Random();
 		int attendance=rand.nextInt(3);
 		
 		switch(attendance) {
 		
 		case 0:
-			System.out.println("Employee is Absent");
-			System.out.println(noWage);
-			System.out.println(" ");
+			sum=sum+noWage;
+			System.out.println(i+"              "+noWage+"                "+sum);
 			break;
 			
 		case 1:
-			System.out.println("Employee is Parttime");
-			System.out.println(halfWage);
-			System.out.println(" ");
+			sum=sum+halfWage;
+			System.out.println(i+"              "+halfWage+"               "+sum);	
 			break;
 			
 		case 2:
-			System.out.println("Employee is Present");
-			System.out.println(fullWage);
-			System.out.println(" ");
+			sum=sum+fullWage;
+			System.out.println(i+"              "+fullWage+"               "+sum);
 			break;
 		}
 		
 	}
+	}
 	
 	
 }
-
