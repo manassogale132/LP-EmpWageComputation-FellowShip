@@ -1,68 +1,91 @@
-package practice;
-
-import java.util.Random;
-
-public class Main1 {
+public class Main  {
 
 	public static void main(String[] args) {
 		
-		Computation obj1=new Computation();
-		obj1.empbuilder();
 		
+		
+		Computation company1=new Computation();
+        company1.empBuilder("Amazon", 250, 150, 0, 28);     //Object for first company which use same Logic class.        
+        company1.sumEmpWage("Amazon");
+        
+        Computation company2=new Computation();
+        
+        company2.empBuilder("Flipkart", 160, 80, 0, 25);     //Object for first company which use same Logic class.        
+        company2.sumEmpWage("Flipkart");
+        
+   
 	}
-
 }
 
-package practice;
 
 import java.util.Random;
 
-public class Computation {
 
-	int wagePerHour=20;
-	int fullDayHours=8;
-	int fullWage=wagePerHour*fullDayHours;
-	int halfWage=fullWage/2;
-	int noWage=0;
+public class Computation{
+	 
+	
 	int sum=0;
-	int workingDays=20;
 	
-	public void empbuilder() {
 	
-		System.out.println("--Employee Wage Builder--");
-		System.out.println("---------------------------------------------------------------");
+	public void empBuilder(String cname, int fwage, int hwage, int nwage, int wdays) {
+		
+	
 		System.out.println(" ");
+		System.out.println("-----------------------------------------------------------");
+		System.out.println("--Employee Wage Builder--");
+		System.out.println("-----------------------------------------------------------");
+		System.out.println(" ");
+		System.out.println("Company-Name is :"+cname);
+		System.out.println(" ");
+		System.out.println("Full-Wage is :"+fwage);
+		System.out.println(" ");
+		System.out.println("Half-Wage is :"+hwage);
+		System.out.println(" ");
+		System.out.println("No-Wage is :"+nwage);
+		System.out.println(" ");
+		System.out.println("Working-Days is :"+wdays);
+		System.out.println(" ");
+		System.out.println("-----------------------------------------------------------");
 		
-		    System.out.println("Days"+"          "+"Wage"+"              "+"Total");
-		    System.out.println(" ");
-		    for(int i=1;i<=workingDays;i++) {
+		
+		for(int i=1;i<=wdays;i++) {
 		Random rand=new Random();
-		int attendance=rand.nextInt(3);
+		int attend=rand.nextInt(3);
 		
-		switch(attendance) {
+		switch(attend) {
 		
 		case 0:
-			sum=sum+noWage;
-			System.out.println(i+"              "+noWage+"                "+sum);
-			break;
-			
+		sum=sum+nwage;
+		break;
+	
 		case 1:
-			sum=sum+halfWage;
-			System.out.println(i+"              "+halfWage+"               "+sum);	
-			break;
+		sum=sum+hwage;
+		break;
 			
 		case 2:
-			sum=sum+fullWage;
-			System.out.println(i+"              "+fullWage+"               "+sum);
-			break;
+		sum=sum+fwage;  
+	    break;
+		
+		}
 		}
 		
-	}
-		    System.out.println("  ");
-		    System.out.println("------------------------------------------------------------");
-		    System.out.println("Total emp Wage :"+sum);
-		    System.out.println("------------------------------------------------------------");
-	}
+}
+
+
 	
+	public void sumEmpWage(String cname) {
+		
+		System.out.println("Total Employee wage for "+cname+" "+"is :"+sum);
+		System.out.println(" ");
+		System.out.println(" ");
+		
+		System.out.println("=================================================================================================");
+			
+		
+	}
 	
 }
+
+	
+
+
